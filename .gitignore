@@ -1,0 +1,7 @@
+# Never commit installed dependencies or OS noise from a local plugin checkout.
+node_modules/
+.DS_Store
+*.log
+
+# Runtime state lives on the Host (~/.dsh/git-activity), never here.
+hidden.json

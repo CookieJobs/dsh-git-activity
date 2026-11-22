@@ -1,0 +1,58 @@
+{
+  "name": "dsh-git-activity",
+  "version": "0.1.0",
+  "description": "Project activity board for DeepSeek Harness: recent commits, uncommitted changes and DSH session activity for every workspace project.",
+  "license": "MIT",
+  "author": "CookieJobs",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CookieJobs/dsh-git-activity.git"
+  },
+  "homepage": "https://github.com/CookieJobs/dsh-git-activity#readme",
+  "bugs": {
+    "url": "https://github.com/CookieJobs/dsh-git-activity/issues"
+  },
+  "type": "module",
+  "main": "./index.js",
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "icon.svg",
+    "README.md",
+    "README.zh.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "dsh": ">=0.2.2-rc.5"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-layout",
+        "@deepseek-ai/dsh-client-ui-sidebar"
+      ]
+    }
+  },
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "git",
+    "commits",
+    "activity",
+    "dashboard"
+  ]
+}

@@ -1,0 +1,11 @@
+# dsh-git-activity 的 bundle patch。
+#
+# 这一行由 bundle 插入到 profile 的插件层；想改行为就在自己的
+# ~/.dsh/profiles/<profile>/cordis.patch.yml 里用同一个 id 覆盖整段 config
+# （cordis 的 id 覆盖是替换整个 config 对象，不是深合并）。
+- insert:
+    - id: git-activity
+      name: 'dsh-git-activity'
+      config:
+        days: 14
+        maxCommits: 30
